@@ -6,6 +6,7 @@ import { ServersComponent } from './servers/servers.component';
 import { IzzyComponent } from './izzy/izzy.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

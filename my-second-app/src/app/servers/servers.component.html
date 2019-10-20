@@ -3,8 +3,15 @@
        class="form-control"
        (input)="onUpdateServerName($event)">
 <br>
-<h1>{{ serverName }}</h1>
+<p> {{serverName2}} </p>
+<br>
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()" >Add Server</button>
-<p>{{ serverCreationStatus }}</p>
-<p [innerText]="allowNewServer"></p>
+<h2>{{ serverCreationStatus }}</h2>
+
+<p>{{ allowNewServer }}</p>
 <h1 app-izzy></h1>
