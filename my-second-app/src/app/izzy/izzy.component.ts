@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: '[app-izzy]',
+  selector: 'app-izzy',
   templateUrl: './izzy.component.html',
   styleUrls: ['./izzy.component.css']
 })
