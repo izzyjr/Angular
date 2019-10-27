@@ -10,7 +10,7 @@ export class FormComponent implements OnInit {
   formName = 'Form-Databinding';
   email = '';
   firstName = '';
-  newMemeber = '';
+  newMember = '';
   constructor() {
   }
 
@@ -32,6 +32,6 @@ export class FormComponent implements OnInit {
   }
 
   submitForm() {
-    this.newMemeber = this.firstName + ' has successfully subscribed with email: ' + this.email;
+    this.newMember = this.firstName + ' has successfully subscribed with email: ' + this.email;
   }
 }
