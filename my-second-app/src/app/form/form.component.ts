@@ -7,11 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
   allowNewSubmission = false;
-  name = 'Form-Email';
+  formName = 'Form-Databinding';
   email = '';
-  password = 'Not databinding';
-  correct = false;
-
+  firstName = '';
+  newMemeber = '';
   constructor() {
   }
 
@@ -20,18 +19,19 @@ export class FormComponent implements OnInit {
 
   inputUpdateEmail(event: Event) {
     this.email = (event.target as HTMLInputElement).value;
-    if (this.email !== '') {
-      this.toggleEditable(event);
-    }
   }
 
   toggleEditable(event) {
-    if (event.target.checked) {
-      this.allowNewSubmission = true;
-      console.log('hello');
-    } else {
-      this.allowNewSubmission = false;
-    }
+      if (this.email !== '' && this.firstName !== '') {
+        if (event.target.checked) {
+          this.allowNewSubmission = true;
+        } else {
+          this.allowNewSubmission = false;
+        }
+      }
   }
 
+  submitForm() {
+    this.newMemeber = this.firstName + ' has successfully subscribed with email: ' + this.email;
+  }
 }

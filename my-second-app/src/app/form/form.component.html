@@ -1,5 +1,5 @@
 <form>
-  <h1> {{ name }} </h1>
+  <h1> {{ formName }} </h1>
   <div class="form-group">
     <label>Email address</label>
     <input
@@ -9,24 +9,28 @@
     (input)="inputUpdateEmail($event)">
   </div>
   <div class="form-group">
-    <label>Password</label>
+    <label>First Name</label>
     <input
-      type="password"
+      type="text"
       class="form-control"
-      placeholder="Password">
+      placeholder="First Name"
+      [(ngModel)]="firstName"
+      [ngModelOptions]="{standalone: true}">
   </div>
   <ul>
     <li>{{email}}</li>
-    <li>{{password}}</li>
+    <li>{{firstName}}</li>
   </ul>
   <div class="checkbox">
     <label>
-      <input type="checkbox" (change)="toggleEditable($event)"> Information Correct
+      <input type="checkbox" (input)="toggleEditable($event)"> Information Correct
     </label>
   </div>
   <button type="submit"
           class="btn btn-default"
-          [disabled]="!allowNewSubmission">Submit</button>
+          [disabled]="!allowNewSubmission"
+          (click)="submitForm()">Submit</button>
+  <h2>{{newMemeber}}</h2>
 </form>
 
 

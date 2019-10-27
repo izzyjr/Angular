@@ -9,6 +9,9 @@
   type="text"
   class="form-control"
   [(ngModel)]="serverName">
+<br>
+
+<h1>{{serverName}}</h1>
 
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()" >Add Server</button>
 <h2>{{ serverCreationStatus }}</h2>
