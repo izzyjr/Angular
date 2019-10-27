@@ -7,6 +7,7 @@ import { IzzyComponent } from './izzy/izzy.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import {FormsModule} from '@angular/forms';
+import { FormComponent } from './form/form.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {FormsModule} from '@angular/forms';
     ServersComponent,
     IzzyComponent,
     WarningAlertComponent,
-    SuccessAlertComponent
+    SuccessAlertComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
