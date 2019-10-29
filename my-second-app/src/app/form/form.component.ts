@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
   allowNewSubmission = false;
-  formName = 'Form-Databinding';
+  formName = 'Click Submit';
   email = '';
   firstName = '';
   newMember = '';
+  checkBox = false;
   constructor() {
   }
 
@@ -24,6 +25,7 @@ export class FormComponent implements OnInit {
   toggleEditable(event) {
       if (this.email !== '' && this.firstName !== '') {
         if (event.target.checked) {
+          this.checkBox = true;
           this.allowNewSubmission = true;
         } else {
           this.allowNewSubmission = false;

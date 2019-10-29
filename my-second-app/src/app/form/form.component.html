@@ -1,5 +1,8 @@
 <form>
-  <h1> {{ formName }} </h1>
+  <h1 *ngIf="checkBox; else notFilled" > {{ formName }} </h1>
+  <ng-template #notFilled>
+    <h1>Please fill out form</h1>
+  </ng-template>
   <div class="form-group">
     <label>Email address</label>
     <input
