@@ -12,6 +12,11 @@ export class FormComponent implements OnInit {
   firstName = '';
   newMember = '';
   checkBox = false;
+  bridge = '';
+  password = '';
+  display = false;
+  log = [];
+  showSecret = false;
   constructor() {
   }
 
@@ -35,5 +40,22 @@ export class FormComponent implements OnInit {
 
   submitForm() {
     this.newMember = this.firstName + ' has successfully subscribed with email: ' + this.email;
+  }
+
+  toggle() {
+    if (!this.display) {
+      this.display = true;
+    } else if (this.display) {
+      this.display = false;
+    }
+  }
+
+  updatePassword($event: Event) {
+    return this.bridge = (event.target as HTMLInputElement).value;
+  }
+
+  onToggleDetails() {
+    this.showSecret = !this.showSecret;
+    this.log.push(this.log.length + 1);
   }
 }

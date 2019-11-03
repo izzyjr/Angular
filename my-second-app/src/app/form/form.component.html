@@ -35,5 +35,30 @@
           (click)="submitForm()">Submit</button>
   <h2>{{newMember}}</h2>
 </form>
+<hr>
+<label>Password</label>
+<br>
+<input
+  type="password"
+  class="form-control"
+  placeholder="password"
+  (input)="updatePassword($event)">
+<br>
+<button
+  type="submit"
+  class="btn btn-default"
+  (click)="toggle()">Display Details</button>
+<br>
+<br>
+<p *ngIf="display"> Your password is: {{password}} </p>
+<hr>
+<!--<button class="btn btn-primary" (click)="showSecret = !showSecret">Display Details</button>-->
+<button class="btn btn-primary" (click)="onToggleDetails()">Display Details</button>
+<p *ngIf="showSecret">Secret Password = tuna</p>
+<div
+  *ngFor="let logItem of log"
+  [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text': logItem >= 5}"
+>{{ logItem }}</div>
 
 
